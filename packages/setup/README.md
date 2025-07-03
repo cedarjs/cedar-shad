@@ -8,7 +8,7 @@ Command for setting up [cedar-shad](https://github.com/cedarjs/cedar-shad) in a 
 yarn dlx setup-cedar-shad
 ```
 
-Run the command above inside your CedarJS project and it'll setup [cedar-shad](https://github.com/cedarjs/cedar-shad/packages/add) for you.
+Run the command above inside your CedarJS project and it'll setup [cedar-shad](https://github.com/cedarjs/cedar-shad/tree/main/packages/add) for you.
 You'll get a tailor-made setup of [shadcn/ui](https://ui.shadcn.com) for CedarJS, with a CedarJS specific cli to generate components.
 
 ## Usage
