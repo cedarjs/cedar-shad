@@ -6,8 +6,7 @@ import { Listr } from 'listr2'
 import { ListrEnquirerPromptAdapter } from '@listr2/prompt-adapter-enquirer'
 import pascalcase from 'pascalcase'
 
-import * as cliHelpers from '@cedarjs/cli-helpers'
-const { colors, getPaths, isTypeScriptProject } = cliHelpers.default
+import { colors, getPaths, isTypeScriptProject } from '@cedarjs/cli-helpers'
 
 import type { CommandOptions } from './yargsTypes.js'
 
@@ -151,7 +150,7 @@ export const handler = async ({
             type: 'multiselect',
             message:
               'Select the components you want to add ' +
-              `(Press ${colors.green('<space>')} to select)`,
+              `(Press ${colors.success('<space>')} to select)`,
             footer: '\nEnter to confirm your choices and continue',
             name: 'name',
             required: true,
