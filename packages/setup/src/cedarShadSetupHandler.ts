@@ -108,22 +108,13 @@ export const handler = async ({ force }: { force: boolean }) => {
       {
         title: 'Installing packages...',
         task: async () => {
-          await execa.command(
-            'yarn add cedar-shad',
-            process.env['RWJS_CWD']
-              ? {
-                  cwd: process.env['RWJS_CWD'],
-                }
-              : {},
-          )
+          const cwd = process.env['RWJS_CWD']
+
+          await execa.command('yarn add cedar-shad', cwd ? { cwd } : {})
 
           await execa.command(
             'yarn workspace web add tailwindcss-animate class-variance-authority clsx tailwind-merge lucide-react',
-            process.env['RWJS_CWD']
-              ? {
-                  cwd: process.env['RWJS_CWD'],
-                }
-              : {},
+            cwd ? { cwd } : {},
           )
         },
       },
@@ -288,9 +279,7 @@ export const handler = async ({ force }: { force: boolean }) => {
       {
         title: 'Update index.css...',
         task: async (_ctx, task) => {
-          /**
-           * Appends css variables and some base styles to index.css
-           */
+          // Appends css variables and some base styles to index.css
           const indexCssPath = path.join(getPaths().web.src, 'index.css')
           const indexCss = fs.readFileSync(indexCssPath, 'utf-8')
 
