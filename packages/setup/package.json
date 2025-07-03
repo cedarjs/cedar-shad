@@ -1,10 +1,10 @@
 {
-  "name": "setup-rw-shad",
-  "version": "2.0.3",
-  "description": "Setup rw-shad in a RedwoodJS project",
+  "name": "setup-cedar-shad",
+  "version": "0.1.0",
+  "description": "Setup cedar-shad in a CedarJS project",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tobbe/rw-shad",
+    "url": "git+https://github.com/cedarjs/cedar-shad",
     "directory": "packages/setup"
   },
   "main": "./dist/cli.js",
@@ -25,12 +25,13 @@
     "release:major": "yarn build && yarn version:major && yarn copyforrelease && cd npx && npm publish && git push --follow-tags"
   },
   "keywords": [
-    "redwood",
-    "redwoodjs",
+    "cedar",
+    "cedarjs",
     "tailwind",
     "tailwindcss",
     "radix",
-    "shadcn"
+    "shadcn",
+    "shadcn/ui"
   ],
   "author": "Tobbe Lundberg",
   "license": "MIT",
@@ -44,7 +45,7 @@
     "tsx": "4.15.7"
   },
   "dependencies": {
-    "@redwoodjs/cli-helpers": "5.4.3",
+    "@cedarjs/cli-helpers": "0.1.1",
     "execa": "5.1.1",
     "findup-sync": "5.0.0",
     "json-stable-stringify": "1.0.2",

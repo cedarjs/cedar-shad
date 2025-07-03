@@ -1,29 +1,26 @@
-rw-shad
-=======
+# cedar-shad
 
-Generate components in your RedwoodJS project
+Generate components in your CedarJS project
 
-Usage
------
+## Usage
 
 ```
-yarn rw-shad <component>
+yarn cedar-shad <component>
 ```
 
-Details
--------
+## Details
 
 Under the hood this will run `npx --yes <shadcn-build.tgz> add --config-dir config --path components/ui --no-overwrite <component>`
 Where `<shadcn-build.tgz>` is my latest build of `shadcn` and `<component>` is
 the name of the component you want to generate.
 
-Contributing
-------------
+## Contributing
 
 If you want to add JS support, or contribute any other changes an easy way to
 test this locally is:
+
 ```
-yarn start --cwd ../rw-example-project <component>
+yarn start --cwd ../cedar-example-project <component>
 ```
 
 ### Releasing

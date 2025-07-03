@@ -1,10 +1,10 @@
 {
-  "name": "rw-shad",
-  "version": "2.4.1",
-  "description": "Add shadcn components to a RedwoodJS project",
+  "name": "cedar-shad",
+  "version": "0.1.0",
+  "description": "Add shadcn components to a CedarJS project",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tobbe/rw-shad",
+    "url": "git+https://github.com/cedarjs/cedar-shad",
     "directory": "packages/add"
   },
   "type": "module",
@@ -25,12 +25,13 @@
     "release:major": "yarn build && yarn version:major && yarn copyforrelease && cd npx && npm publish && git push --follow-tags"
   },
   "keywords": [
-    "redwood",
-    "redwoodjs",
+    "cedar",
+    "cedarjs",
     "tailwind",
     "tailwindcss",
     "radix",
-    "shadcn"
+    "shadcn",
+    "shadcn/ui"
   ],
   "author": "Tobbe Lundberg",
   "license": "MIT",
@@ -45,8 +46,8 @@
     "typescript": "5.5.2"
   },
   "dependencies": {
+    "@cedarjs/cli-helpers": "0.1.1",
     "@listr2/prompt-adapter-enquirer": "https://verdaccio.tobbe.dev/@listr2/prompt-adapter-enquirer/-/prompt-adapter-enquirer-2.0.17.tgz",
-    "@redwoodjs/cli-helpers": "5.4.3",
     "enquirer": "2.4.1",
     "execa": "5.1.1",
     "findup-sync": "5.0.0",

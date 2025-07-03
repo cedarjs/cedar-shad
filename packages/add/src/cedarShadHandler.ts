@@ -6,7 +6,7 @@ import { Listr } from 'listr2'
 import { ListrEnquirerPromptAdapter } from '@listr2/prompt-adapter-enquirer'
 import pascalcase from 'pascalcase'
 
-import * as cliHelpers from '@redwoodjs/cli-helpers'
+import * as cliHelpers from '@cedarjs/cli-helpers'
 const { colors, getPaths, isTypeScriptProject } = cliHelpers.default
 
 import type { CommandOptions } from './yargsTypes.js'
@@ -50,8 +50,9 @@ interface Component {
 type Registry = Array<Component>
 
 const REGISTRY_URL = process.env['REGISTRY_URL'] ?? 'https://ui.shadcn.com/r'
-const RW_REGISTRY_URL =
-  process.env['RW_REGISTRY_URL'] ?? 'https://redwoodjs.github.io/rw-shad/r'
+const CEDARJS_REGISTRY_URL =
+  process.env['CEDARJS_REGISTRY_URL'] ??
+  'https://cedarjs.github.io/cedar-shad/r'
 
 // TODO: Read from components.json
 // path.join(getPaths().web.config, 'components.json')
@@ -623,7 +624,7 @@ function getRegistryUrl({
 }
 
 function getRwUrl(name: string) {
-  return `${RW_REGISTRY_URL}/${name}.json`
+  return `${CEDARJS_REGISTRY_URL}/${name}.json`
 }
 
 function isComponent(json: unknown): json is Component {

@@ -8,9 +8,9 @@ interface ForceOptions extends BaseOptions {
   force: boolean
 }
 
-export const scriptName = 'setup-rw-shad'
+export const scriptName = 'setup-cedar-shad'
 
-export const description = 'Setup rw-shad'
+export const description = 'Setup cedar-shad'
 
 export const builder = (yargs: Yargs.Argv<BaseOptions>) => {
   return yargs.option('force', {
@@ -22,6 +22,6 @@ export const builder = (yargs: Yargs.Argv<BaseOptions>) => {
 }
 
 export const handler = async (options: ForceOptions) => {
-  const { handler } = await import('./rwShadSetupHandler')
+  const { handler } = await import('./cedarShadSetupHandler')
   return handler(options)
 }

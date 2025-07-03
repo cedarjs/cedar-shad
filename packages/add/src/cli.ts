@@ -5,7 +5,13 @@ import findup from 'findup-sync'
 import { hideBin, Parser } from 'yargs/helpers'
 import yargs from 'yargs/yargs'
 
-import { scriptName, command, description, builder, handler } from './rwShad.js'
+import {
+  scriptName,
+  command,
+  description,
+  builder,
+  handler,
+} from './cedarShad.js'
 
 // @ts-ignore
 let { cwd, help } = Parser(hideBin(process.argv))
@@ -55,7 +61,7 @@ yargs(hideBin(process.argv))
   })
   .command(
     'rw [components..]',
-    'Generate one or more RW components',
+    'Generate one or more CedarJS components',
     builder,
     handler,
   )
