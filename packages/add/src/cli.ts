@@ -60,7 +60,7 @@ yargs(hideBin(process.argv))
     description: 'Working directory to use (where `redwood.toml` is located)',
   })
   .command(
-    'rw [components..]',
+    'cedar [components..]',
     'Generate one or more CedarJS components',
     builder,
     handler,

@@ -5,7 +5,7 @@ export const scriptName = 'cedar-shad'
 
 export const command = '$0 [components..]'
 
-export const description = 'Generate one or more components'
+export const description = 'Generate one or more Shadcn components'
 
 export const builder = (yargs: Argv<BaseOptions>) => {
   return yargs
