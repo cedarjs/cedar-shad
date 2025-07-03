@@ -1,6 +1,6 @@
 {
   "name": "cedar-shad",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Add shadcn components to a CedarJS project",
   "repository": {
     "type": "git",

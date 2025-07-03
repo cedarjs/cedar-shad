@@ -1,6 +1,6 @@
 {
   "name": "setup-cedar-shad",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Setup cedar-shad in a CedarJS project",
   "repository": {
     "type": "git",
