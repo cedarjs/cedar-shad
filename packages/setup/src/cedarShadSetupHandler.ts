@@ -398,9 +398,9 @@ export const handler = async ({ force }: { force: boolean }) => {
     // TODO: Link to GH issues/PRs
     console.log()
     console.log(
-      colors.green('Send me a DM or @ me on Twitter with any feedback'),
+      colors.success('Send me a DM or @ me on Twitter with any feedback'),
     )
-    console.log(colors.green('https://twitter.com/tobbedotdev'))
+    console.log(colors.success('https://twitter.com/tobbedotdev'))
     console.log()
     console.log(
       colors.info(
